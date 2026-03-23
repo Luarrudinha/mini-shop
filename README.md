@@ -1,16 +1,108 @@
-# React + Vite
+# 🛒 Mini Shop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação web de e-commerce simples desenvolvida com React, com funcionalidades de listagem de produtos e carrinho de compras.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Tecnologias utilizadas
 
-## React Compiler
+* React
+* JavaScript
+* Vite
+* CSS
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📦 Funcionalidades
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Listar produtos
+* Adicionar produtos ao carrinho
+* Remover produtos do carrinho
+* Aumentar/diminuir quantidade
+* Calcular total da compra
+* Persistência do carrinho (localStorage)
+
+---
+
+## 📁 Estrutura do projeto
+
+```
+src/
+ ├── components/
+ │   ├── ProductCard.jsx
+ │   └── CartItem.jsx
+ ├── data/
+ │   └── products.js
+ ├── App.jsx
+ └── main.jsx
+```
+
+---
+
+## ⚙️ Como rodar o projeto
+
+### 1. Instalar dependências
+
+```bash
+npm install
+```
+
+---
+
+### 2. Rodar o projeto
+
+```bash
+npm run dev
+```
+
+---
+
+### 3. Acessar no navegador
+
+```
+http://localhost:5173
+```
+
+---
+
+## 🛒 Como funciona o carrinho
+
+* Os produtos são adicionados ao carrinho ao clicar no botão
+* Se o produto já existir, a quantidade é incrementada
+* O carrinho é salvo no navegador usando `localStorage`
+* O total é calculado multiplicando preço × quantidade
+
+---
+
+## 🧠 Lógica importante
+
+### ➕ Adicionar ao carrinho
+
+* Verifica se o item já existe
+* Se existir → aumenta a quantidade
+* Se não → adiciona novo item
+
+### ➖ Remover item
+
+* Diminui a quantidade
+* Remove completamente se chegar a 0
+
+---
+
+## 📌 Observações
+
+* Projeto focado em aprendizado de React
+* Não possui backend integrado
+* Pode ser expandido para consumir uma API
+
+---
+
+## 🧑‍💻 Autor
+
+Desenvolvido por Luana Arruda 💙
+
+---
+
+## 📄 Licença
+
+Este projeto é apenas para fins de estudo.
