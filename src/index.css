@@ -1,0 +1,22 @@
+/* No arquivo src/index.css */
+:root {
+  --primary: #2563eb;
+  --bg: #f8fafc;
+  --text: #1e293b;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+button {
+  transition: all 0.2s;
+}
+
+button:hover {
+  filter: brightness(0.9);
+  transform: translateY(-1px);
+}
